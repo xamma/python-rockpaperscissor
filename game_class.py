@@ -11,17 +11,23 @@ class RockPaperScissor:
     pass
 
   def get_user_input(self):
-    x = int(input())
+    try:
+      x = int(input("Enter your choice now: "))
+    except:
+      x = int(input("You can only input Integers, try again: "))
+      
     return x
 
   def greet_user(self):
-    print("Hello ! Time to play. ")
-    print("Please insert your choice")
+    print("Hello and Welcome to Rock-Paper-Scissors! Time to play.")
+    print("-----------")
+    print("Please insert your choice: ")
     print("(1) Rock")
     print("(2) Paper")
     print("(3) Scissor")
     print("-----------")
     print("Enter '4' to quit the game")
+    print("\n")
 
   def get_computer_choice(self):
     choice = randbelow(4)
@@ -40,7 +46,7 @@ class RockPaperScissor:
       human_choice = Options.SCISSOR.name
       print(f"You chose {human_choice}.")
     else:
-      print("Please choose a valid option.")
+      print("Please choose a valid option. \n")
     if computer_choice == 1:
       computer_choice = Options.ROCK.name
       print(f"Computer chose {computer_choice}.")
@@ -51,16 +57,16 @@ class RockPaperScissor:
       computer_choice = Options.SCISSOR.name
       print(f"Computer chose {computer_choice}.")
     else:
-      print("Please choose a valid option.")
+      print("Please choose a valid option. \n")
 
   def print_tie(self):
-    print("Tie! Noone wins, try again.")
+    print("Tie! Noone wins, try again. \n")
 
   def print_win(self):
-    print("You won! Congratulations.")
+    print("You won! Congratulations. \n")
 
   def print_lose(self):
-    print("You lose!")
+    print("You lose! \n")
     
   def calculate_winner(self, human_choice, computer_choice):
     if human_choice == computer_choice:
@@ -87,4 +93,4 @@ class RockPaperScissor:
     elif human_choice == 4:
       print("Goodbye !")
     else:
-      print("Please choose a valid option.")
+      print("Please choose a valid option. \n")
