@@ -73,8 +73,8 @@ class RockPaperScissor:
       self.get_answer(human_choice=human_choice, computer_choice=computer_choice)
       self.print_tie()
     elif human_choice == Options.ROCK.value and computer_choice == Options.PAPER.value:
-      self.print_lose()
       self.get_answer(human_choice=human_choice, computer_choice=computer_choice)
+      self.print_lose()
     elif human_choice == Options.ROCK.value and computer_choice == Options.SCISSOR.value:
       self.get_answer(human_choice=human_choice, computer_choice=computer_choice)
       self.print_win()
