@@ -6,5 +6,5 @@ Example for refacturing from single file into functions into class.
 
 ```
 docker build -t <image_name> .
-docker run -it <image_name>
+docker run -it --rm <image_name>
 ```
